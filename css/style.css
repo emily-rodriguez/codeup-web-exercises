@@ -1,5 +1,51 @@
 .fancy-header {
-    color: purple;
+    color: rosybrown;
     text-decoration: underline;
     /* external style sheet takes precedence over embedded style sheet*/
+}
+
+.center{
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+
+body {
+    background-image: url("../img/dust_scratches.png");
+    background-repeat: round;
+    font-family: 'Oswald', sans-serif;
+    color: saddlebrown;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+td{
+    padding:10px;
+    font-size:20px;
+}
+th{
+    padding:20px;
+    font-size:30px;
+    text-decoration: underline;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: green;
 }
