@@ -1,37 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 .fancy-header {
     color: rosybrown;
     text-decoration: underline;
-    /* external style sheet takes precedence over embedded style sheet*/
 }
 
-.center{
+body {
+    /*background-color: aquamarine;*/
+    background-image: url("../img/dust_scratches.png");
+    background-repeat: repeat;
+    font-family: 'Oswald', sans-serif;
+    color: saddlebrown;
+}
+
+header {
     text-align: center;
 }
 
-h3 {
+h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
-}
-
-
-body {
-    background-image: url("../img/dust_scratches.png");
-    background-repeat: round;
-    font-family: 'Oswald', sans-serif;
-    color: saddlebrown;
 }
 
 ul {
     list-style-type: circle;
 }
 
-td{
-    padding:10px;
-    font-size:20px;
-}
-th{
-    padding:20px;
-    font-size:30px;
-    text-decoration: underline;
+table, tr, td, th {
+    border: 2px saddlebrown solid;
 }
 
 a:link {
