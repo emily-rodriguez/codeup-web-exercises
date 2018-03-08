@@ -1,0 +1,18 @@
+.circle {
+    height:600px;
+    width: 600px;
+    border-radius: 50%;
+    background-color:red;
+    position: relative;
+    top: 200px;
+    left: 300px;
+}
+#box {
+    height: 450px;
+    width: 320px;
+    border: solid 3px black;
+    position: absolute;
+    top: 20%;
+    right: 90%;
+    fill-opacity: 0;
+}
