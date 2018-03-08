@@ -1,0 +1,19 @@
+input[type="text"]
+{
+    border: 0;
+    border-bottom: 1px solid black;
+    outline: 0;
+}
+
+#centered {
+    text-align: center;
+}
+
+
+#alphabetical_list {
+    list-style-type: upper-alpha;
+}
+
+text {
+    text-decoration: underline;
+}
