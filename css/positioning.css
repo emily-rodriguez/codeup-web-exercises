@@ -53,3 +53,10 @@ h1 {
 .box:nth-child(5) {
     clear: left;
 }
+
+#ribbon {
+    position:fixed;
+    top: 0px;
+    right: 0px;
+}
+
