@@ -3,22 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>TAR-2001-Residential_Lease</title>
+    <link rel="stylesheet" href="css/lease.css">
+
 </head>
 <body>
     <header>
-        <img src="/codeup-web-exercises/img/texas_realtors.jpg" alt="Logo" height="50" weight="50">
-        <br>
-        <blockquote>Texas Association of Realtors&reg;</blockquote>
-        <blockquote><strong>RESIDENTIAL LEASE</strong></blockquote>
+        <div align="middle"><img src="/codeup-web-exercises/img/texas_realtors.jpg" alt="Logo" align="middle" height="50" weight="50">
+        </div>
+        <h3 id="centered">Texas Association of Realtors&reg;</h3>
+        <h4 id="centered"><strong>RESIDENTIAL LEASE</strong></h4>
         <hr>
     </header>
     <form method="POST" action="https://requestb.in/rgj05irg">
         <ol>
-            <li><label><strong>PARTIES:</strong> The parties to this lease are:<br>
-            the owner of the Property, Landlord,:<input type="text" id="parties" name="parties">;and<br>Tenant(s):<input
-                        type="text" id="tenants" name="tenants">.</label></li>
+            <li>
+                <div><strong>PARTIES:</strong> The parties to this lease are:</div><br>
+                <div>the owner of the Property, Landlord,:<input id="parties" type="text" name="parties" size="50">
+                ;and</div>
+                <div>Tenant(s):<input type="text" id="tenants" name="tenants">.</div>
+            </li>
+            <br>
+            <li>
+                <div><strong>PROPERTY:</strong> Landlord leases to Tenant the follows</div><br>
+                <div>Address:<input id="address" type="text" name="address"></div>
+                <div>legally described as:<input type="text" id="legal_description" name="legal_description"></div>
+                <div>in <input type="text" id="county" name="county">County, Texas, together with the following non-real-property items:</div>
+                <div><input type="text" id="items" name="items"></div>
+                <div>The real property and the non-real-property are collectively called the "Property".</div>
+            </li>
+            <br>
+            <li>
+                <div><strong>TERM:</strong></div><br>
+                <div><ol id="alphabetical_list">
+                    <li><div><text>Primary Term:</text> The primary term of this lease begins and ends as follows:</div><br>
+                    Commencement Date: <input type="text" id="commencement_date" name="commencement_date">
+                    Expiration Date: <input type="text" id="expiration_date" name="expiration_date"></li><br>
+                    <li><text>Delay of Occupancy:</text>Tenant must occupy the Property within 5 days after the Commencement Date. If Tenant is
+                    unable to occupy the Property by the 5th day after the Commencement Date because of construction on the
+                    Property or a prior tenant's holding over the Property, Tenant may terminate this lease by giving written notice to
+                    Landlord before the Property becomes available to be occupied by Tenant, and Landlord will refund to Tenant the
+                    security deposit and any rent paid. Landlord will abate rent on a daily basis for a delay caused by construction or a
+                    prior tenant's holding over. This paragraph does not apply to any delay in occupancy caused by cleaning, repairs,
+                    or make-ready items.
+                    </li>
+                </ol></div>
+            </li>
+            <br>
+            <li>
+                <div><strong>AUTOMATIC RENEWAL AND NOTICE OF TERMINATION:</strong> This lease automatically renews on a month-to-month
+                basis unless Landlord or Tenant provides the other party written notice of termination as provided in Paragraph 4A.
+                Oral notice of termination is not sufficient under any circumstances. Time is of the essence for providing notice of
+                termination (strict compliance with dates by which notice must be provided is required). The date on which rent is due
+                does not apply to the requirement for providing written notice of termination. If a box is not checked under Paragraph
+                    4A, Paragraph 41(1) will apply. If a box is not checked under Paragraph 4B, Paragraph 4B(1) will apply.</div><br>
+                <ol id="alphabetical_list">
+                    <li>This lease automatically renews on a month-to-month basis unless Landlord or Tenant provides the other party
+                    <text>written</text>notice of termination not less than: <em>(Check only one box.)</em>
+                    </li>
+                </ol>
+                <label><input type="radio" name="days" value="30_days"> (1) 30 days before the Expiration Date.
+                </label><br>
+                <label><input type="radio" name="days" value="other_days"> (2)<input type="text" id="days" name="days"> days before the Expiration Date
+                </label>
+            </li>
         </ol>
     </form>
-
 </body>
 </html>
