@@ -41,16 +41,6 @@
     width: 12.5%;
 }
 
-@media screen and (max-width: 764px) {
-    .column {
-        width: 100%;
-    }
-
-    .row {
-        margin: 0px;
-    }
-}
-
 .two-third {
     width: 66.667%;
 }
@@ -73,4 +63,14 @@
 
 .offset-one-fourth {
     margin-left: 25%;
+}
+
+@media screen and (max-width: 764px) {
+    .column {
+        width: 100%;
+    }
+
+    .row {
+        margin: 0px;
+    }
 }
