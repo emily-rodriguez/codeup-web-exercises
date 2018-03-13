@@ -44,7 +44,7 @@ h1 {
 }
 
 .main {
-    margin: 10px;
+    /*margin: 10px;*/
 }
 
 .sub-section {
@@ -66,13 +66,13 @@ footer {
 
 #social-media-links li {
     list-style: none;
-    float: left;
     letter-spacing: 1em;
 }
 
 .icons {
     width: 15px;
     height: 15px;
+    float: left;
 }
 
 /*Applies when the screen is wider than 992px*/
@@ -84,9 +84,9 @@ footer {
     }
 
     .icons {
-    width: 50px;
-    height: 50px;
-    padding: 0 5px;
+        width: 50px;
+        height: 50px;
+        padding: 0 5px;
     }
 
     h1 {
@@ -98,12 +98,13 @@ footer {
 
     .nav-links {
         text-align: right;
-        float: right;
+        float: left;
     }
 
     .nav-links li {
         background-color: transparent;
         display: inline-block;
+        float: left;
         padding: 4px;
         line-height: 10px;
         margin-top: 10px;

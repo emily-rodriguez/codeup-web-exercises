@@ -1,0 +1,38 @@
+.container *{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1064px;
+    float: left;
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+}
+
+#block1 {
+    background-color: white;
+    width: 166px;
+    height: 144px;
+    border-right: black solid 6px;
+    border-bottom: black solid 6px;
+}
+
+#block2 {
+    background-color: red;
+    width: 353px;
+    height: 144px;
+    border-right: black solid 6px;
+    border-bottom: black solid 6px;
+
+}
+
+#block3 {
+    background-color: white;
+    width: 89px;
+    height: 313px;
+    border-right: black solid 6px;
+    border-bottom: black solid 6px;
+}
+
+

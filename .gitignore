@@ -1,5 +1,7 @@
 .idea/
 *.iml
 *.DS_Store
-*.jpg
+img/
 README.md
+blah.html
+

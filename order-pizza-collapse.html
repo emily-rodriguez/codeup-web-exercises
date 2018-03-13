@@ -1,0 +1,160 @@
+<!doctype html5>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order Pizza Collapse</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pizza world</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Menu</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-0" type="search" placeholder="Zip code" aria-lable="Zip code">
+            <button class="btn btn-outline-dark m-2" type="submit">Search stores near you!</button>
+        </form>
+        <div class="ml-auto">
+            <img src="img/glyphicons-4-user.png" alt="user">Sign up
+        </div>
+</nav>
+<main class="container">
+    <div id="welcome" class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 text-center">Welcome to Pizza World!</h1>
+    </div>
+    </div>
+    <div>
+        <h2 class="display 4">Build your own pizza!</h2>
+        <nav>
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#size-and-crust" role="button" aria-expanded="false" aria-controls="size-and-crust">
+                    <span class="badge badge-pill badge-secondary mr-1">1</span>Size and crust
+                </a>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#cheese-and-sauce" aria-expanded="false" aria-controls="cheese-and-sauce">
+                    <span class="badge badge-pill badge-secondary mr-1">2</span>Cheese and Sauce
+                </button>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#toppings" aria-expanded="false" aria-controls="toppings">
+                    <span class="badge badge-pill badge-secondary mr-1">3</span>Toppings
+                </button>
+            </p>
+        </nav>
+    </div>
+    <div class="collapse multi-collapse" id="size-and-crust">
+        <div class="card bg-light">
+            <div class="card-header bg-primary text-white">
+                Choose size and crust
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Hand Tossed</div>
+                <div class="card-body">Garlic seasoned crust with a rich, buttery taste.</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="small-hand"><input id="small-hand" type="radio" name="crust"> Small (10")</label>
+                    </li>
+                    <li class="list-group-item">
+                        <label for="medium-hand"><input id="medium-hand" type="radio" name="crust"> Medium (12")</label>
+                    </li>                </ul>
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Crispy Thin</div>
+                <div class="card-body">Thin enough for optimum crispy to crunchy ratio.</div>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <label for="medium-thin"><input id="medium-thin" type="radio" name="crust"> Medium (12")</label>
+                    </li>
+                    <li class="list-group-item">
+                        <label for="medium-large"><input id="medium-large" type="radio" name="crust"> Large (14")</label>
+                    </li>                </ul>
+            </div>
+            <div class="card-footer bg-light text-right">
+                <a href="#" class="btn btn-primary mr-auto">Next Step ></a>
+            </div>
+        </div>
+    </div>
+    <div class="collapse multi-collapse" id="cheese-and-sauce">
+        <div class="card bg-light">
+            <div class="card-header bg-primary text-white">
+                Choose Cheese and Sauce
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Cheese</div>
+                <div class="card-body">How Much?</div>
+                <select class="form-control form-group mx-auto">
+                    <option value="Light">Light</option>
+                    <option value="Normal" selected>Normal</option>
+                    <option value="Extra">Extra</option>
+                    <option value="Double">Double</option>
+                </select>
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Sauce</div>
+                <div class="card-body">What Type?</div>
+                <select class="form-group form-control mx-auto">
+                    <option value="Tomato sauce">Tomato sauce</option>
+                    <option value="Marinara sauce" selected>Marinara sauce</option>
+                    <option value="BBQ sauce">BBQ sauce</option>
+                    <option value="Alfredo Sauce">Alfredo Sauce</option>
+                </select>
+                <div class="card-body">How Much?</div>
+                <select class="form-group form-control mx-auto">
+                    <option value="Light">Light</option>
+                    <option value="Normal" selected>Normal</option>
+                    <option value="Extra">Extra</option>
+                </select>
+            </div>
+            <div class="card-footer bg-light text-right">
+                <a href="#" class="btn btn-primary mr-auto">< Previous Step</a>
+                <a href="#" class="btn btn-primary mr-auto">Next Step ></a>
+            </div>
+        </div>
+    </div>
+    <div class="collapse multi-collapse" id="toppings">
+        <div class="card bg-light">
+            <div class="card-header bg-primary text-white">
+                Choose Toppings
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Choose Meats</div>
+                <ul class="list-group">
+                    <li class="list-group-item"><label for="beef"><input id="beef" type="checkbox"> Beef</label></li>
+                    <li class="list-group-item"><label for="ham"><input id="ham" type="checkbox"> Ham</label></li>
+                    <li class="list-group-item"><label for="philly"><input id="philly" type="checkbox"> Philly Steak</label></li>
+                    <li class="list-group-item"><label for="bacon"><input id="bacon" type="checkbox"> Bacon</label></li>
+                </ul>
+            </div>
+            <div class="card bg-light">
+                <div class="card-header">Choose Non-Meats</div>
+                <ul class="list-group">
+                    <li class="list-group-item"><label for="peppers"><input id="peppers" type="checkbox"> Green Peppers</label></li>
+                    <li class="list-group-item"><label for="mushrooms"><input id="mushrooms" type="checkbox"> Mushrooms</label></li>
+                    <li class="list-group-item"><label for="onions"><input id="onions" type="checkbox"> Onions</label></li>
+                    <li class="list-group-item"><label for="jalapeno"><input id="jalapeno" type="checkbox"> Jalape&ntilde;o</label></li>
+                </ul>
+            </div>
+            <div class="card-footer bg-light text-right">
+                <a href="#" class="btn btn-primary mr-auto">Checkout
+                    <img src="img/shopping-cart.png" height="20px" width="20px" alt="cart" class="pb-1">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Main page content -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Your custom JS goes here -->
+</body>
+</html>

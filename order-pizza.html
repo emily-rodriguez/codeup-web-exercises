@@ -21,7 +21,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-0" type="search" placeholder="Zip code" aria-lable="Zip code">
+                <input class="form-control mr-sm-0" type="search" placeholder="Zip code">
                 <button class="btn btn-outline-dark m-2" type="submit">Search stores near you!</button>
             </form>
             <div class="ml-auto">
@@ -29,13 +29,8 @@
             </div>
     </nav>
     <main class="container">
-        <div class="jumbotron jumbotron-fluid card">
-            <div class="container fill">
-            <img src="img/pizza.png" alt="pizza" class="card-img">
-            </div>
-            <div class="card-img-overlay">
-            <h1 class="display-4 text-center card-title">Welcome to Pizza World!</h1>
-            </div>
+        <div id="welcome" class="jumbotron jumbotron-fluid">
+            <h1 class="display-4 text-center">Welcome to Pizza World!</h1>
         </div>
         <div>
             <h2 class="display 4">Build your own pizza!</h2>
@@ -154,19 +149,19 @@
                     <div class="card bg-light">
                         <div class="card-header">Choose Meats</div>
                         <ul class="list-group">
-                            <li class="list-group-item"><input type="checkbox"> Beef</li>
-                            <li class="list-group-item"><input type="checkbox"> Ham</li>
-                            <li class="list-group-item"><input type="checkbox"> Philly Steak</li>
-                            <li class="list-group-item"><input type="checkbox"> Bacon</li>
+                            <li class="list-group-item"><label for="beef"><input id="beef" type="checkbox"> Beef</label></li>
+                            <li class="list-group-item"><label for="ham"><input id="ham" type="checkbox"> Ham</label></li>
+                            <li class="list-group-item"><label for="philly"><input id="philly" type="checkbox"> Philly Steak</label></li>
+                            <li class="list-group-item"><label for="bacon"><input id="bacon" type="checkbox"> Bacon</label></li>
                         </ul>
                     </div>
                     <div class="card bg-light">
                         <div class="card-header">Choose Non-Meats</div>
                         <ul class="list-group">
-                            <li class="list-group-item"><input type="checkbox"> Green Peppers</li>
-                            <li class="list-group-item"><input type="checkbox"> Mushrooms</li>
-                            <li class="list-group-item"><input type="checkbox"> Onions</li>
-                            <li class="list-group-item"><input type="checkbox"> Jalepe&ntilde;o Peppers</li>
+                            <li class="list-group-item"><label for="peppers"><input id="peppers" type="checkbox"> Green Peppers</label></li>
+                            <li class="list-group-item"><label for="mushrooms"><input id="mushrooms" type="checkbox"> Mushrooms</label></li>
+                            <li class="list-group-item"><label for="onions"><input id="onions" type="checkbox"> Onions</label></li>
+                            <li class="list-group-item"><label for="jalapeno"><input id="jalapeno" type="checkbox"> Jalape&ntilde;o</label></li>
                         </ul>
                     </div>
                     <div class="card-footer bg-light text-right">

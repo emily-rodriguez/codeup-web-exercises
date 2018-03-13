@@ -16,3 +16,31 @@
     right: 90%;
     fill-opacity: 0;
 }
+
+#blue_box {
+    background-color:#2C6BB9;
+    float:left;
+    height: 500px;
+    width: 200px;
+}
+
+#red_box {
+    background-color: red;
+    height: 500px;
+    width: 200px;
+    position: absolute;
+    left:50%;
+    border-bottom-left-radius: 50%;
+}
+
+#green_box {
+    background-color: #4FA24E;
+    float:left;
+    height: 500px;
+    width: 400px;
+    position: relative;
+}
+
+
+
+
