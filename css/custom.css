@@ -6,13 +6,6 @@
     box-sizing: border-box;
 }
 
-/*.jumbotron {*/
-    /*width:100%;*/
-    /*max-width: 1500px;*/
-    /*margin: 0 auto;*/
-    /*padding: 0px;*/
-/*}*/
-
 .fill {
     display: flex;
     justify-content: center;
@@ -25,12 +18,6 @@
     min-height: 100%
 }
 
-/*.card-img-overlay {*/
-    /*background-color: #F8F8F8;*/
-    /*width: 100%;*/
-    /*margin-top: 20px;*/
-    /*margin-bottom: 80px;*/
-/*}*/
 
 .card-img-overlay {
     padding: 0px;
@@ -45,4 +32,8 @@
 
 .bg-light {
     margin: 20px;
+}
+
+.form-group {
+    width: 95%
 }
