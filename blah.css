@@ -1,0 +1,113 @@
+/*body {*/
+    /*background-color: #f0f0f0;*/
+    /*font-family: 'Abel', sans-serif;*/
+/*}*/
+
+/*h1, h2, h5, .circle {*/
+    /*font-family: 'Anton', sans-serif;*/
+/*}*/
+
+/*li {*/
+    /*list-style-type: none;*/
+/*}*/
+
+/*.nav-link {*/
+    /*color: black;*/
+/*}*/
+
+
+/*#logo {*/
+    /*height: 105px;*/
+    /*width: 105px;*/
+/*}*/
+
+/*#hero-text {*/
+    /*font-size: 40px;*/
+/*}*/
+
+/*#bck_color {*/
+    /*background-color: white;*/
+    /*height: 58px;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*z-index: -2;*/
+    /*margin-top: 25px;*/
+/*}*/
+
+/*.circle {*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*width: 105px;*/
+    /*height: 105px;*/
+    /*line-height: 95px;*/
+    /*border-radius: 90%;*/
+    /*border: solid white 6px;*/
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+/*}*/
+
+/*.red {*/
+    /*background-color: #e6563b;*/
+/*}*/
+
+/*.orange {*/
+    /*background-color: #eb9d3a;*/
+/*}*/
+
+/*.green {*/
+    /*background-color: #7cb06c;*/
+/*}*/
+
+/*.blue {*/
+    /*background-color: #00aba9;*/
+/*}*/
+
+/*.sm-circle {*/
+    /*color: black;*/
+    /*font-weight: bold;*/
+    /*width: 18px;*/
+    /*height: 18px;*/
+    /*line-height: 19px;*/
+    /*font-size: x-small;*/
+    /*border-radius: 90%;*/
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+    /*float: right;*/
+    /*font-family: 'Anton', sans-serif;*/
+/*}*/
+
+/*hr {*/
+    /*border: 1px solid #d5d5d5;*/
+/*}*/
+
+/*{*/
+    /*height: 10px;*/
+    /*width: 10px;*/
+/*}*/
+
+/*#featured {*/
+    /*display: block;*/
+    /*margin: auto;*/
+    /*max-width: 100%;*/
+    /*border-radius: 3%;*/
+    /*border: 5px solid #e6e6e6;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+/*.featured-boxes {*/
+    /*float: left;*/
+/*}*/
+/*.featured-boxes:nth-child(3){*/
+    /*clear: both;*/
+/*}*/
+
+/*.last {*/
+    /*display: block;*/
+    /*max-width: 100%;*/
+/*}*/
+
+/*.last-text {*/
+    /*float: left;*/
+    /*clear: both;*/
+/*}*/
+

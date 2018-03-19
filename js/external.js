@@ -19,7 +19,9 @@ console.log("Hello from external JavaScript!")
 // var herculesDays = prompt("How many days did you rent Hercules?");
 // console.log(herculesDays);
 //
-// var totalcost = ((Number(littleMermaidDays) + Number(brotherBearDays) + Number(herculesDays)) * 3);
+// var pricePerDay = 3;
+//
+// var totalcost = ((Number(littleMermaidDays) + Number(brotherBearDays) + Number(herculesDays)) * pricePerDay);
 //
 // alert("You owe a total of $" + totalcost.toFixed(2));
 
@@ -28,9 +30,9 @@ console.log("Hello from external JavaScript!")
 // var amazonRate = 380;
 // var facebookRate = 350;
 //
-// var googleHours = prompt("How many hours did you work for Google?");
-// var amazonHours = prompt("How many hours did you work for Amazon?");
-// var facebookHours = prompt("How many hours did you work for Facebook?");
+// var googleHours = parseInt(prompt("How many hours did you work for Google?"));
+// var amazonHours = parseInt(prompt("How many hours did you work for Amazon?"));
+// var facebookHours = parseInt(prompt("How many hours did you work for Facebook?"));
 //
 // var totalPay = ((googleRate * googleHours) + (amazonRate * amazonHours) + (facebookRate * facebookHours));
 //
@@ -48,19 +50,17 @@ console.log("Hello from external JavaScript!")
 // alert("Can you take this class?: " + meetsRequirements);
 // console.log("Can user take class?: " + meetsRequirements);
 
-//DISCOUNT PROBLEM
+// DISCOUNT PROBLEM
 var items = prompt("How many items in your cart?");
-console.log(items >= 2);
+console.log(items > 2);
 
-var offerexpired = confirm("Is the offer expired?");
-console.log(offerexpired);
+var isOfferExpired = confirm("Is the offer expired?");
+console.log(isOfferExpired);
 
-var premiumMember = confirm("Are you a premium member?")
-console.log(premiumMember);
+var isPremiumMember = confirm("Are you a premium member?");
+console.log(isPremiumMember);
 
-var enoughItems = items >= 2;
-
-var canUseCoupon = (enoughItems && !offerexpired) || (enoughItems && premiumMember);
+var canUseCoupon = (items > 2 && !isOfferExpired) || (enoughItems && isPremiumMember);
 
 alert ("Can you use this coupon: " + canUseCoupon);
 console.log("Can coupon be used?: " + canUseCoupon);
