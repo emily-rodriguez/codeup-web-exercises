@@ -17,7 +17,6 @@ function sayHello(name) {
 }
 
 
-
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -83,12 +82,14 @@ console.log(isTwo(random));
  */
 
 console.log("EXERCISE: calculateTip function");
-function calculateTip (x,y) {
-  var result = x * y;
+function calculateTip (tipPercentage,total) {
+  var result = tipPercentage * total;
   return result;
 }
 
-console.log(calculateTip(0.2,100));
+console.log(calculateTip(0.2,20));
+console.log(calculateTip(0.25,25.50));
+console.log(calculateTip(0.15,33.42));
 
 /**
  * TODO:
@@ -133,8 +134,9 @@ alert("Your total amount is $" + (parseInt(billTotal) + parseInt(tipTotal)));
 
 console.log("EXERCISE: applyDiscount function");
 function applyDiscount (originalPrice, discountPercent) {
-    var result = (originalPrice * discountPercent);
-    return result;
+    var discountAmount = (originalPrice * discountPercent);
+    var priceAfterDiscount = originalPrice - discountAmount;
+    return priceAfterDiscount;
 }
 
 console.log(applyDiscount(100, 0.2))
@@ -240,19 +242,16 @@ var password = "notastrongpassword";
 
 function isValidPassword(password) {
     var passwordLength = (parseInt(password.length) > 5);
-    var usernameNotIncluded = (password.indexOf(username)) === -1;
-    var noWhitespace = (password.trim() === password);
-    return passwordLength && usernameNotIncluded && noWhitespace;
+    var passwordIncludesUsername = (password.indexOf(username)) === -1;
+    var passwordHasWhitespace = (password.trim() !== password);
+    return passwordLength && !passwordIncludesUsername && !passwordHasWhitespace;
 }
 
 console.log(isValidPassword(password));
 
 console.log("BONUS: isRightTriangle function");
 function isRightTriangle(a,b,c) {
-    var aSquared = a*a;
-    var bSquared = b*b;
-    var cSquared = c*c;
-    return (aSquared + bSquared) === cSquared;
+    return square(a) + square(b) === square(c);
 }
 
 var a = 3;
