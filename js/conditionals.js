@@ -110,7 +110,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 console.log("selecting a random color");
 console.log("randomly selected color is " + randomColor);
-console.log(analyzeColor(randomColor));
+analyzeColor(randomColor)
 
 /**
  * TODO:
@@ -154,7 +154,9 @@ function analyzeColor(color){
 
 var userInputColor = prompt("Please enter a color");
 
-console.log(analyzeColor(userInputColor));
+console.log("The color you entered is " + userInputColor)
+
+analyzeColor(userInputColor)
 
 console.log("End of 'enter a color' exercise");
 
