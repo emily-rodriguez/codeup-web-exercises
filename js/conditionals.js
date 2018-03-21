@@ -20,42 +20,26 @@ console.log("starting 'enter number' exercise");
 
 var enterNumber = confirm("Would you like to enter a number?");
 
-console.log(enterNumber);
-
 if (enterNumber) {
-    var userNumber = prompt("Please enter a number");
+    var userNumber = parseInt(prompt("Please enter a number"))
+
+    if (!isNaN(userNumber)) {
+        if (userNumber % 2 === 0) {
+            alert("The number you entered is even.");
+        } else {
+            alert("The number you entered is odd.");
+        }
+
+        alert("number + 100 = " + (userNumber + 100));
+
+        if (userNumber > 0) {
+            alert(userNumber + " is a positive number");
+        }  else {
+            alert(userNumber + " is a negative number");
+        }
+    }
 } else {
     alert("You did not enter a number");
-}
-
-var transformedNumber = parseFloat(userNumber);
-
-console.log(transformedNumber);
-
-var numberIsEven = (transformedNumber % 2) === 0;
-
-if (numberIsEven) {
-    alert("The number you entered is even.");
-} else {
-    alert("The number you entered is odd.");
-}
-
-function numberPlus100(transformedNumber) {
-    return (transformedNumber + 100);
-}
-
-alert("The number you entered + 100 = " + numberPlus100(transformedNumber));
-
-
-var numberIsPositive = (transformedNumber > 0);
-var numberIsNegative = (transformedNumber < 0);
-
-if (numberIsPositive) {
-    alert("The number you entered is positive.");
-} else if (numberIsNegative) {
-    alert("The number you entered is negative.");
-} else {
-    alert("The number you entered is 0 or not a number");
 }
 
 console.log("End of 'enter number' exercise");
