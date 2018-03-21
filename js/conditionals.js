@@ -16,7 +16,7 @@
  * Can you refactor your code to use functions?
  */
 
-console.log("starting 'enter number exercise");
+console.log("starting 'enter number' exercise");
 
 var enterNumber = confirm("Would you like to enter a number?");
 
@@ -58,7 +58,7 @@ if (numberIsPositive) {
     alert("The number you entered is 0 or not a number");
 }
 
-console.log("ending 'enter number exercise");
+console.log("End of 'enter number' exercise");
 
 
 /* ########################################################################## */
@@ -109,7 +109,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 console.log("selecting a random color");
-console.log(randomColor);
+console.log("randomly selected color is " + randomColor);
 console.log(analyzeColor(randomColor));
 
 /**
@@ -117,28 +117,30 @@ console.log(analyzeColor(randomColor));
  * Refactor your above function to use a switch-case statement
  */
 
-switch(randomColor) {
-    case "red":
-        alert("Strawberries are red");
-        break;
-    case "orange":
-        alert("Oranges are orange");
-        break;
-    case "yellow":
-        alert("The sun is yellow");
-        break;
-    case "green":
-        alert("The grass is green");
-        break;
-    case "blue":
-        alert("The sky is blue");
-        break;
-    case "indigo":
-        alert("Indigo girls?");
-        break;
-    case "violet":
-        alert("You're turning violet, Violet");
-        break;
+function analyzeColor(color){
+    switch(color) {
+        case "red":
+            alert("Strawberries are red");
+            break;
+        case "orange":
+            alert("Oranges are orange");
+            break;
+        case "yellow":
+            alert("The sun is yellow");
+            break;
+        case "green":
+            alert("The grass is green");
+            break;
+        case "blue":
+            alert("The sky is blue");
+            break;
+        case "indigo":
+            alert("Indigo girls?");
+            break;
+        case "violet":
+            alert("You're turning violet, Violet");
+            break;
+    }
 }
 
 
