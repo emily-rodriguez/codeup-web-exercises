@@ -16,42 +16,46 @@
  * Can you refactor your code to use functions?
  */
 
-var enterNumber = confirm("Would you like to enter a number?");
 
-if (enterNumber) {
-    var userNumber = prompt("Please enter a number");
-} else {
-    alert("You did not enter a number");
-}
-
-console.log(userNumber);
-
-var numberIsEven = (parseFloat(userNumber) % 2) === 0;
-
-if (numberIsEven) {
-    alert("The number you entered is even.");
-} else {
-    alert("The number you entered is odd.");
-}
-
-function numberPlus100(userNumber) {
-    var result = parseFloat(userNumber) + 100;
-    return result;
-}
-
-alert("The number you entered + 100 = " + numberPlus100(userNumber));
-
-
-var numberIsPositive = (parseFloat(userNumber) > 0);
-var numberIsNegative = (parseFloat(userNumber) < 0);
-
-if (numberIsPositive) {
-    alert("The number you entered is positive.");
-} else if (numberIsNegative) {
-    alert("The number you entered is negative.");
-} else {
-    alert("The number you entered is 0 or not a number");
-}
+// var enterNumber = confirm("Would you like to enter a number?");
+//
+// console.log(enterNumber);
+//
+// if (enterNumber) {
+//     var userNumber = prompt("Please enter a number");
+// } else {
+//     alert("You did not enter a number");
+// }
+//
+// var transformedNumber = parseFloat(userNumber);
+//
+// console.log(transformedNumber);
+//
+// var numberIsEven = (transformedNumber % 2) === 0;
+//
+// if (numberIsEven) {
+//     alert("The number you entered is even.");
+// } else {
+//     alert("The number you entered is odd.");
+// }
+//
+// function numberPlus100(transformedNumber) {
+//     return (transformedNumber + 100);
+// }
+//
+// alert("The number you entered + 100 = " + numberPlus100(transformedNumber));
+//
+//
+// var numberIsPositive = (transformedNumber > 0);
+// var numberIsNegative = (transformedNumber < 0);
+//
+// if (numberIsPositive) {
+//     alert("The number you entered is positive.");
+// } else if (numberIsNegative) {
+//     alert("The number you entered is negative.");
+// } else {
+//     alert("The number you entered is 0 or not a number");
+// }
 
 
 
@@ -74,6 +78,20 @@ if (numberIsPositive) {
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+
+var color = prompt("Please enter a color");
+
+function analyzeColor(color) {
+    if (color === "blue") {
+        alert("blue is the color of the sky");
+    } else if (color === "red"){
+        alert("Strawberries are red");
+    } else if (color === "cyan") {
+        alert("I don't know anything about cyan");
+    }
+}
+
+analyzeColor(color);
 
 // Don't change the next two lines!
 // These lines create two variables for you:
