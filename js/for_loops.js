@@ -9,10 +9,14 @@ showMultiplicationTable(6);
 
 for (var i = 1; i <= 10; i++) {
     var randomNumber = Math.floor(Math.random() * 200) + 20;
-    console.log('for loop iteration #' + i + ', random number = ' + randomNumber);
+    // console.log('for loop iteration #' + i + ', random number = ' + randomNumber);
     if (randomNumber % 2 === 0) {
-        console.log("Hey! That's an even number yo!");
+        console.log(randomNumber + " is even");
     } else {
-        console.log("Hey, that number is odd yo!");
+        console.log(randomNumber + " is odd");
     }
+}
+
+for (var i = 1, j = 0; i < 10, j < 10; i++,) {
+
 }
