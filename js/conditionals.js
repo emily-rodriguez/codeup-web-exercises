@@ -66,19 +66,21 @@ console.log("End of 'enter number' exercise");
  */
 
 console.log("starting 'enter a color' exercise");
-var color = 'red';
 
 function analyzeColor(color) {
     if (color === "blue") {
-        alert("blue is the color of the sky");
+        return "blue is the color of the sky";
     } else if (color === "red"){
-        alert("Strawberries are red");
+        return "Strawberries are red";
     } else if (color === "cyan") {
-        alert("I don't know anything about cyan");
+        return "I don't know anything about cyan";
+    } else {
+        return "I do not know that color";
     }
 }
 
-analyzeColor("red");
+analyzeColor("blue");
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -94,7 +96,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 console.log("selecting a random color");
 console.log("randomly selected color is " + randomColor);
-analyzeColor(randomColor)
+analyzeColor(randomColor);
 
 /**
  * TODO:
