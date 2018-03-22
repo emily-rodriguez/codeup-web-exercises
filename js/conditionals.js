@@ -210,3 +210,5 @@ var billTotal = prompt("What was the total amount of your bill?");
 console.log("Your total, after the discount, comes to $" + parseFloat(calculateTotal(luckyNumber,billTotal)).toFixed(2));
 
 console.log("End of 'calculate total' exercise");
+
+
