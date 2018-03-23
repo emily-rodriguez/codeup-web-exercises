@@ -25,3 +25,5 @@ do {
     console.log("I have " + allCones + " cones left.");
 } while (allCones > 0);
 
+console.log("Hooray! I sold them all!");
+
