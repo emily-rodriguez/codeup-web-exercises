@@ -17,6 +17,19 @@ for (var i = 1; i <= 10; i++) {
     }
 }
 
-for (var i = 1, j = 0; i < 10, j < 10; i++,) {
+function isString(input) {
+    return typeof input === "string";
+}
 
+for (var i = 1; i < 10; i++) {
+    var a = ' ';
+    for(var b = 1; b <= i; b++) {
+        var a = a + i;
+    }
+    console.log(a);
+}
+
+for (var i = 100; i >= 5; i) {
+    console.log(i);
+    var i = i - 5;
 }
