@@ -1,3 +1,5 @@
+'use strict';
+
 // 1. Write a loop that plays "99 bottles of beer" song.
 // It should say bottle instead of bottles when there's only one, ' +
 // 'and the song is over when there are 0 bottles.
@@ -74,10 +76,16 @@ for (var i = 1; i <= 100; i++) {
 //
 // Fibonacci sequence formula =
 //
-//     x(n) = x(n-1) + x(n-2)
+//     x(i) = x(i-1) + x(i-2)
 
-for (var i = 0; i <= 4181, i++;) {
-   var test = (i-1) + (i-2);
-   console.log(test);
-   var i = test;
+var i;
+var fib = [];
+
+fib[0] = 0;
+fib[1] = 1;
+for(i = 2; i < 20; i++) {
+
+    fib[i] = fib[i-2] + fib[i-1];
+    console.log(fib[i]);
+
 }
