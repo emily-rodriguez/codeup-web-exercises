@@ -1,5 +1,14 @@
 var number = prompt("Please enter an odd number between 1 and 50");
 
+for (i = number; i < 50; i) {
+
+    if (number % 2 === 1) {
+        break;
+    } else {
+       number = prompt("Please enter a valid, odd number between 1 and 50")
+    }
+}
+
 
 console.log('Number to skip is:' + number);
 
