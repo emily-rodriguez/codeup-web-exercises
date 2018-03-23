@@ -1,33 +1,16 @@
-var number = prompt("Please enter an odd number between 1 and 50");
+do {
 
-for (i = number; i < 50; i) {
+    var number = prompt("Please enter an odd number between 1 and 50");
 
-    if (number % 2 === 1) {
-        break;
-    } else {
-       number = prompt("Please enter a valid, odd number between 1 and 50")
-    }
-}
-
+} while ((number % 2 === 0) || (number >= 50));
 
 console.log('Number to skip is:' + number);
 
-for (var i = 1; i < 50; i++) {
-
-    if (i % 2 == 0) {
-        // number is even
-        // odd numbers are cooler
-        // skip the rest of the loop and continue with the next iteration
-        continue;
-    }
+for (var i = 1; i < 50; i+=2) {
 
     if (number == i) {
         console.log('Yikes! Skipping number:' + i);
     } else {
         console.log('Here is an odd number: ' + i);
-    }
-
-    if (i >= 49) {
-        break;
     }
 }

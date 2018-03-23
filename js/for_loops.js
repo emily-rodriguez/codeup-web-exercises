@@ -17,9 +17,6 @@ for (var i = 1; i <= 10; i++) {
     }
 }
 
-function isString(input) {
-    return typeof input === "string";
-}
 
 for (var i = 1; i < 10; i++) {
     var a = ' ';
