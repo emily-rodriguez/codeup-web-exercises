@@ -18,18 +18,13 @@ for (var i = 98; i > 0; i--) {
 // 2. Write the loop and code necessary to sum all integers between 1 to 100, including 100.
 //
 
-// for (var i = 1; i <= 100; i++) {
-//     var a = parseFloat(' ');
-//     for (var b = 1; b <= i, b++;) {
-//        var a = a + i;
-//     }
-//     console.log(a);
-// }
+var total = 0;
 
 for (var i = 1; i <= 100; i++) {
-    var a =
+    total += i;
 }
 
+console.log(total);
 
 
 // 3. Write a loop that starts at 1 and goes to 100. for each number that
@@ -38,7 +33,22 @@ for (var i = 1; i <= 100; i++) {
 // both 3 and 5, output "FizzBuzz".. For all other numbers, output the number
 // itself.
 
-
+for (var i = 1; i <= 100; i++) {
+    if ((i % 5 === 0) && (i % 3 === 0)) {
+        console.log("FizzBuzz");
+        continue;
+    }
+    if (i % 3 === 0) {
+        console.log("Fizz");
+        continue;
+    }
+    if (i % 5 === 0) {
+        console.log("Buzz");
+        continue;
+    } else {
+        console.log(i);
+    }
+}
 
 //     Output:
 // 1
@@ -60,3 +70,14 @@ for (var i = 1; i <= 100; i++) {
 //     ...
 //
 // 4. Write the code/loop that outputs the first 20 Fibonacci numbers.
+
+//
+// Fibonacci sequence formula =
+//
+//     x(n) = x(n-1) + x(n-2)
+
+for (var i = 0; i <= 4181, i++;) {
+   var test = (i-1) + (i-2);
+   console.log(test);
+   var i = test;
+}
