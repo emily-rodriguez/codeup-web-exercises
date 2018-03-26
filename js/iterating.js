@@ -17,6 +17,7 @@
 
     console.log(names.length);
 
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
