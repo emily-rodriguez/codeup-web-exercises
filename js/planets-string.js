@@ -26,18 +26,17 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsJoin = planetsArray.join('<br>');
-    // document.write(planetsJoin);
+    console.log(planetsArray.join('<br>'));
 
     // adding the break tag would be useful if you wanted to display your array in the body of the html.
 
 
 
-    var planetList = planetsArray.join("<li>");
+    var planetList = planetsArray.join("</li><li>");
 
     console.log(planetList);
 
-    document.write("<ul>" + "<li>" + planetList + "</li>" + "</ul>");
+    document.write("<ul><li>" + planetList + "</li></ul>");
 
 
 })();
