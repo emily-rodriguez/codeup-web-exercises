@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture</title>
+</head>
+<body>
+
+<script>
+
+    // var todoList = ['Take out the trash', 'Clean the car', 'Pay the bills'];
+    // document.write(todoList.join('<br>'));
+    // var task = prompt('Add a new task');
+    // todoList.push(task);
+    // document.write(todoList.join('<br>'));
+    //
+    // var importantTask = prompt('What\'s your first task for the day?');
+    // todoList.unshift(importantTask);
+    // document.write(todoList.join('<br>'));
+    //
+    // var completedTask = prompt('What task has been completed?');
+    // var taskIndex = todoList.indexOf(completedTask);
+    // delete todoList[taskIndex];
+    //
+    // todoList.slice(taskIndex);
+    //
+    // document.write(todoList.join('<br>'));
+
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var slice = colors.slice(2, 4);
+
+    console.log(colors); // colors is unchanged
+    // ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+    console.log(slice); // ['yellow', 'green']
+
+    slice = colors.slice(3);
+    console.log(slice); // ['green', 'blue', 'indigo', 'violet']
+
+</script>
+
+</body>
+</html>
