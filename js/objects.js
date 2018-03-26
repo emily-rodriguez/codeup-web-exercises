@@ -173,8 +173,21 @@
      */
 
 
-    function createBook(title, author) {
 
-    }
+    var books = {
+        "createBook": function(title, authorFirstName, authorLastName) {
+            books.title = title;
+            books.author.firstName = authorFirstName;
+            books.author.lastName = authorLastName;
+        }
+    };
+
+    books.createBook("Freedom", "Jonathan", "Franzen");
+
+
+
+
+
+
 
 })();
