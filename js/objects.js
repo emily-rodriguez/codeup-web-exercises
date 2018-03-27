@@ -152,13 +152,11 @@
      *      ...
      */
 
-    var i = 1;
 
-    books.forEach (function(book){
-            console.log("Book # " + i);
+    books.forEach (function(book, i){
+            console.log("Book # " + (i + 1));
             console.log("Title: " + book.title);
             console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-            i++;
     });
 
     /**
@@ -173,21 +171,34 @@
      */
 
 
+    function createBook(title, authorFirstName, authorLastName) {
+        var bookObject = {
+        title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
+        };
+        return bookObject;
+    }
 
-    var books = {
-        "createBook": function(title, authorFirstName, authorLastName) {
-            books.title = title;
-            books.author.firstName = authorFirstName;
-            books.author.lastName = authorLastName;
-        }
-    };
+    console.log(createBook("Freedom", "Jonathan", "Franzen"));
 
-    books.createBook("Freedom", "Jonathan", "Franzen");
-
-
-
-
+    // function createBookArray(title, authorFirstName, authorLastName) {
+    //     var bookArray = [
+    //         {title: title,
+    //         author: {
+    //             firstName: authorFirstName,
+    //             lastName: authorLastName
+    //         }}
+    //     ];
+    //     return bookArray;
+    // }
+    //
+    // console.log(createBookArray("In Cold Blood", "Truman", "Capote"));
 
 
 
 })();
+
+
