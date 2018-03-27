@@ -211,9 +211,10 @@
 
     function createBook(title, author){
         var name = author.split(" ");
-        return {title: title, author: {
-                firstName: name[0],
-                lastName: name[1]
+        return {title: title,
+                author: {
+                    firstName: name[0],
+                    lastName: name[1]
             }}
 
     }
