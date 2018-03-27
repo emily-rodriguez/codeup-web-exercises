@@ -32,7 +32,7 @@
      */
 
     person.sayHello = function() {
-        return "Hello from " + person.firstName + " " + person.lastName + "!";
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
     };
 
     console.log(person.sayHello());
@@ -89,13 +89,14 @@
      */
 
     var books = [
-        {
-            title: "Harry Potter and the Philosopher's Stone",
-            author: {
-                firstName: "JK",
-                lastName: "Rowling"
-            }
-        },
+        // {
+        //     title: "Harry Potter and the Prisoner of Azkaban",
+        //     author: {
+        //         firstName: "JK",
+        //         lastName: "Rowling"
+        //     }
+        // },
+        createBook("Harry Potter and the Prisoner of Azkaban", "JK Rowling"),
         {
             title: "American Gods",
             author: {
@@ -123,7 +124,7 @@
                 firstName: "Celeste",
                 lastName: "Ng"
             }
-        },
+        }
     ];
 
 
@@ -159,6 +160,16 @@
             console.log("Author: " + book.author.firstName + " " + book.author.lastName);
     });
 
+
+    // alternate solution using for loop
+
+    // for (var i = 0; i < books.length; i++) {
+    //     console.log("Book # " + (i + 1);
+    //     console.log(("Title: " + books[i].title));
+    //     console.log(("Author: " + books[i].author.firstName + " " + books[i].author.lastName));
+    // }
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -171,41 +182,59 @@
      */
 
 
-    function createBook(title, authorFirstName, authorLastName) {
-        var bookObject = {
-        title: title,
-            author: {
-                firstName: authorFirstName,
-                lastName: authorLastName
-            }
-        };
-        return bookObject;
-    }
+    // function createBook(title, authorFirstName, authorLastName) {
+    //     var bookObject = {
+    //     title: title,
+    //         author: {
+    //             firstName: authorFirstName,
+    //             lastName: authorLastName
+    //         }
+    //     };
+    //     return bookObject;
+    // }
+    //
+    // var newBook = createBook("Freedom", "Jonathan", "Franzen");
+    // console.log(newBook);
+    //
+    //
+    //
+    // function showBookInfo(bookObject) {
+    //         console.log("Book # " + 6);
+    //         console.log("Title: " + bookObject.title);
+    //         console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+    // }
+    //
+    // console.log(showBookInfo(newBook));
 
-    var newBook = createBook("Freedom", "Jonathan", "Franzen");
-    console.log(newBook);
+    // alternate solution:
 
-    function createBookArray(title, authorFirstName, authorLastName) {
-        var bookArray = [
-            {title: title,
-            author: {
-                firstName: authorFirstName,
-                lastName: authorLastName
+
+    function createBook(title, author){
+        var name = author.split(" ");
+        return {title: title, author: {
+                firstName: name[0],
+                lastName: name[1]
             }}
-        ];
-        return bookArray;
+
     }
 
-    console.log(createBookArray("In Cold Blood", "Truman", "Capote"));
+    books.push(createBook("In Cold Blood", "Truman Capote"));
 
-    function showBookInfo(bookObject) {
-            console.log("Book # " + 6);
-            console.log("Title: " + bookObject.title);
-            console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+    // // You can re-assin an element in an array using this...
+    // books[3] = createBook("Gone Girl", "Gillian Flynn");
+
+    function showBookInfo(book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log(("------"));
     }
 
-    console.log(showBookInfo(newBook));
+    // for (var i = 0; i < books.length; i++) {
+    //     showBookInfo(books[i], i);
+    // }
 
+    books.forEach(showBookInfo);
 
 })();
 
