@@ -182,21 +182,29 @@
         return bookObject;
     }
 
-    console.log(createBook("Freedom", "Jonathan", "Franzen"));
+    var newBook = createBook("Freedom", "Jonathan", "Franzen");
+    console.log(newBook);
 
-    // function createBookArray(title, authorFirstName, authorLastName) {
-    //     var bookArray = [
-    //         {title: title,
-    //         author: {
-    //             firstName: authorFirstName,
-    //             lastName: authorLastName
-    //         }}
-    //     ];
-    //     return bookArray;
-    // }
-    //
-    // console.log(createBookArray("In Cold Blood", "Truman", "Capote"));
+    function createBookArray(title, authorFirstName, authorLastName) {
+        var bookArray = [
+            {title: title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }}
+        ];
+        return bookArray;
+    }
 
+    console.log(createBookArray("In Cold Blood", "Truman", "Capote"));
+
+    function showBookInfo(bookObject) {
+            console.log("Book # " + 6);
+            console.log("Title: " + bookObject.title);
+            console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+    }
+
+    console.log(showBookInfo(newBook));
 
 
 })();
