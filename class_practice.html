@@ -29,6 +29,45 @@
     //make a function that take in a "string" and capitalizes it
     //step 1.
 
+    // JS study hall 3/28/18
+
+    // 'for' loop: when we wnt to iterate a known amount of times (arrays)
+    // (keywords: each, in, every)
+
+    //'while' loop: when we don't know how many times we want to loop (ex. seating shuffle)
+    // (keywords: until, when)
+
+    //the '.' of our code looks like '.something()' that's a method, if there's no '.', it's a function
+
+    //A method operates on the object it's called on, that is, whatever is on the lefthand side of the '.'
+
+    //"12345".substring(2,4)
+
+    //sum all values in an array
+
+    function sumValues(someArray) {
+        //loop through array
+        //add each value (inside of the loop) to a total
+        //return that total
+        var total = 0;
+        someArray.forEach(function(number){
+            total += number;
+        });
+        return total;
+    }
+
+    //To concatenate strings from an array
+
+    function concatStrings(someArray) {
+        //loop through array
+        //add each value (inside of the loop) to a total
+        //return that total
+        var ultimateString = "";
+        someArray.forEach(function(str){
+            ultimateString += str;
+        });
+        return ultimateString;
+    }
 
 
 </script>

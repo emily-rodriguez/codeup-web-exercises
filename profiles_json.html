@@ -891,18 +891,31 @@
             });
             return count;
         };
-        report.sumOfBalanceAllProfiles = function() {
+
+        // NEED TO REMOVE '$' AND GET BALANCE TO STRING. TRY FOREACH LOOP?
+    report.sumOfBalanceAllProfiles = function() {
+            var sumOfBalance = 0;
             for (var i = 0; i < arrayOfProfiles.length; i++) {
-
-
+                var balance = arrayOfProfiles.balance;
+                var balanceNumber;
+                function convertBalanceToNumber (balance) {
+                    if (balance.indexOf('$') === 0) {
+                        balanceNumber = balance.slice(1);
+                    } else {
+                        balanceNumber = balance;
+                    }
+                    var parsedNumber = parseFloat(balanceNumber);
+                    return parsedNumber;
+                }
+                sumOfBalance += parsedNumber[i];
             }
+            return sumOfBalance;
         };
 
 
     console.log("The number of profiles is: " + report.numberOfProfiles);
     console.log("The number of active profiles is: " + report.getNumberOfActiveProfiles());
-
-
+    console.log(("The sum of all balances is... " + report.sumOfBalanceAllProfiles()));
 
 </script>
 </body>
