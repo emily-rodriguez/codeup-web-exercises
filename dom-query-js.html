@@ -45,14 +45,13 @@
 
         // TODO: Set text color on every other list item to grey
         for (var i = 0; i < listItems.length; i+=2) {
-            listItems[i].style.color = '#444';
+            listItems[i].style.color = '#999';
         }
 
         // TODO: Set text color of li with dbid = 1 to blue
         (function() {
             for (var i = 0; i < listItems.length; i++) {
                 var dbId = listItems[i].getAttribute('data-dbid');
-                console.log(dbId);
                 if (dbId === "1"){
                     listItems[i].style.color = 'blue';
                 }
