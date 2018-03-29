@@ -61,8 +61,17 @@
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
+        //how to create a *real* array from an HTML collection (which is kinda an array)
+        subParagraphs = Array.from(subParagraphs);
+
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!"
+        subParagraphs[0].innerText = "Mission Accomplished!"
+
+    //finding elements without having to add a class or an id everytime
+        //when you inspect the element; right in the inspector click, copy: copy selector
+        //this will give you the most efficient CSS selector for that specific element...
+
+        // document.querySelector("body > div > main > div > div.md-content > article > p:nth-child(10)");
 
     })();
 </script>
