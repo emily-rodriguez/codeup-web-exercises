@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum All Expenses</title>
+</head>
+<body>
+
+<script>
+
+    // sum up all the expenses
+    // get an average of all the expenses
+
+    var expenses = [
+        {itemName: "macbook pro", cost: "$2,400"},
+        {itemName: "raspberry pi", cost: "$60"},
+        {itemName: "Dell XPS laptop", cost: "$1,200"}
+    ];
+
+    function removeSymbols (input) {
+        var string = input.replace(/[$,]/g, "");
+        return parseFloat(string);
+    }
+
+
+    function sumValues(someArray) {
+        //loop through array
+        //add each value (inside of the loop) to a total
+        //return that total
+        var total = 0;
+        someArray.forEach(function(expense){
+            total += removeSymbols(expense.cost);
+        });
+        return total;
+    }
+
+    console.log(sumValues(expenses));
+
+
+</script>
+
+</body>
+</html>
