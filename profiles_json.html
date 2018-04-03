@@ -904,6 +904,13 @@
             report.averageBalancePerUsers = function averageBalance(someArray) {
                 return (this.sumOfBalanceAllProfiles(someArray) / (arrayOfProfiles.length));
             };
+            report.averageAgeofUsers = function averageAge(someArray) {
+                var ageTotal = 0;
+                someArray.forEach(function(profile){
+                    ageTotal += profile.age;
+                });
+                return Math.round(ageTotal / (arrayOfProfiles.length));
+            };
 
 
         // NEED TO REMOVE '$' AND GET BALANCE TO STRING. TRY FOREACH LOOP?
@@ -919,7 +926,7 @@
         console.log("The number of active profiles is: " + report.getNumberOfActiveProfiles());
         console.log("The sum of all balances is... $" + report.sumOfBalanceAllProfiles(arrayOfProfiles).toLocaleString());
         console.log("The average balance per users is... $" + report.averageBalancePerUsers(arrayOfProfiles).toLocaleString());
-
+        console.log("The average age of users is... " + report.averageAgeofUsers(arrayOfProfiles));
 
 
     </script>
