@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps</title>
+    <style>
+        #map-canvas {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-canvas"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPprmIotIcFxwIKv-6moO4H8hvAXprI2g"></script>
+
+    <script>
+        var mapOptions = {
+            zoom: 15,
+
+            center: {
+                lat: 30.477960,
+                lng: -90.107517
+            }
+        };
+        var mapCanvas = document.getElementById('map-canvas');
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var geocoder = new google.maps.Geocoder();
+
+        var address =
+            {
+                address: "428 E Boston St, Covington, LA 70433"
+            };
+
+        // var addresses = [
+        //     {
+        //         name: "OxLot 9",
+        //         address: "428 E Boston St, Covington, LA 70433",
+        //         favoriteDish: "Frog legs"
+        //     },
+        //     {
+        //         name: "Xi'an Famous Foods",
+        //         address: "81 St Marks Pl, New York, NY 10003",
+        //         favoriteDish: "Cumin lamb hand-pulled noodles"
+        //     },
+        //     {
+        //         name: "The Esquire Tavern",
+        //         address: "155 E Commerce St, San Antonio, TX 78205",
+        //         favoriteDish: "Chile relleno"
+        //     }
+        // ];
+        //
+        // addresses.forEach (function(address){
+        //     function callback(results, status) {
+        //
+        //         if (status === google.maps.GeocoderStatus.OK) {
+        //             map.setCenter(results[0].geometry.location);
+        //
+        //
+        //             var marker = new google.maps.Marker({
+        //                 position: results[0].geometry.location,
+        //                 map: map,
+        //                 draggable: true,
+        //                 animation: google.maps.Animation.DROP
+        //             });
+        //
+        //
+        //             var infoWindow = new google.maps.InfoWindow({
+        //                 content: "OxLot 9 <br> <strong>Fantastic</strong> Happy Hour! <br> Try the frog legs!"
+        //             });
+        //             // infoWindow.open(map,marker);
+        //
+        //             marker.addListener('click', function () {
+        //                 infoWindow.open(map, marker);
+        //             });
+        //
+        //         } else {
+        //             alert("Geocoding was not successful - STATUS: " + status);
+        //         }
+        //     }
+        //
+        //     geocoder.geocode(addresses.address, callback);
+        // });
+
+
+            function callback(results, status) {
+
+                if (status === google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+
+
+                    var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map,
+                        draggable: true,
+                        animation: google.maps.Animation.DROP
+                    });
+
+
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: "OxLot 9 <br> <strong>Fantastic</strong> Happy Hour! <br> Try the frog legs!"
+                    });
+                    // infoWindow.open(map,marker);
+
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+            }
+
+        geocoder.geocode(address, callback);
+
+
+    </script>
+</body>
+</html>

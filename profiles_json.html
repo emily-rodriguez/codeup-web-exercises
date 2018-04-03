@@ -911,6 +911,23 @@
                 });
                 return Math.round(ageTotal / (arrayOfProfiles.length));
             };
+            report.numberOfMen = function countMen(someArray) {
+                var totalMen = 0;
+
+                someArray.forEach(function(profile){
+                    if (profile.gender === "male") {
+                        totalMen++;
+                    }
+                })
+            };
+            report.numberOfWomen = function countWomen(someArray) {
+                var totalWomen = 0;
+                someArray.forEach(function(profile){
+                    if (profile.gender === "female") {
+                        totalWomen++;
+                    }
+                })
+            };
 
 
         // NEED TO REMOVE '$' AND GET BALANCE TO STRING. TRY FOREACH LOOP?
