@@ -2,9 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Study Hall</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--<style>-->
+        <!--#myInput {-->
+            <!--background-image: url('/css/searchicon.png'); /* Add a search icon to input */-->
+            <!--background-position: 10px 12px; /* Position the search icon */-->
+            <!--background-repeat: no-repeat; /* Do not repeat the icon image */-->
+            <!--width: 100%; /* Full-width */-->
+            <!--font-size: 16px; /* Increase font-size */-->
+            <!--padding: 12px 20px 12px 40px; /* Add some padding */-->
+            <!--border: 1px solid #ddd; /* Add a grey border */-->
+            <!--margin-bottom: 12px; /* Add some space below the input */-->
+        <!--}-->
+
+        <!--#myUL {-->
+            <!--/* Remove default list styling */-->
+            <!--list-style-type: none;-->
+            <!--padding: 0;-->
+            <!--margin: 0;-->
+        <!--}-->
+
+
+        <!--#myUL li a {-->
+            <!--border: 1px solid #ddd; /* Add a border to all links */-->
+            <!--margin-top: -1px; /* Prevent double borders */-->
+            <!--background-color: #f6f6f6; /* Grey background color */-->
+            <!--padding: 12px; /* Add some padding */-->
+            <!--text-decoration: none; /* Remove default text underline */-->
+            <!--font-size: 18px; /* Increase the font-size */-->
+            <!--color: black; /* Add a black text color */-->
+            <!--display: block; /* Make it into a block element to fill the whole list */-->
+        <!--}-->
+
+        <!--#myUL li a:hover:not(.header) {-->
+            <!--background-color: #eee; /* Add a hover effect to all links, except for headers */-->
+        <!--}-->
+    <!--</style>-->
 </head>
 <body>
+
+<!-- Nav tabs -->
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">1</div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">2</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+</div>
+
+</body>
 
 <script>
 
@@ -74,6 +130,62 @@
     // }, 2000);
 
 
+    var books = [
+        {
+            title: "Harry Potter and the Prisoner of Azkaban",
+            author: {
+                firstName: "JK",
+                lastName: "Rowling"
+            }
+        },
+        {
+            title: "American Gods",
+            author: {
+                firstName: "Neil",
+                lastName: "Gaiman"
+            }
+        },
+        {
+            title: "Ready Player One",
+            author: {
+                firstName: "Ernest",
+                lastName: "Cline"
+            }
+        },
+        {
+            title: "The Power",
+            author: {
+                firstName: "Naomi",
+                lastName: "Alderman"
+            }
+        },
+        {
+            title: "Little Fires Everywhere",
+            author: {
+                firstName: "Celeste",
+                lastName: "Ng"
+            }
+        }
+    ];
+
+
+    books.push(createBook("In Cold Blood", "Truman Capote"));
+
+    // // You can re-assin an element in an array using this...
+    // books[3] = createBook("Gone Girl", "Gillian Flynn");
+
+    function showBookInfo(book, index) {
+        console.log("Book # " + (index + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log(("------"));
+    }
+
+    // for (var i = 0; i < books.length; i++) {
+    //     showBookInfo(books[i], i);
+    // }
+
+    books.forEach(showBookInfo);
 
 
 
