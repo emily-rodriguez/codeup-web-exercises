@@ -25,6 +25,28 @@
 
     // Problem 2
 
+    var i;
+    var fib = [];
+    var sum = 0;
+
+
+    fib[0] = 0;
+    fib[1] = 1;
+    for(i = 2; i < 34; i++) {
+
+        fib[i] = fib[i - 2] + fib[i - 1];
+        console.log(fib[i]);
+        if (fib[i] % 2 === 0) {
+            sum += fib[i];
+        }
+
+        console.log(sum)
+
+    }
+
+
+
+
 </script>
 
 </body>
