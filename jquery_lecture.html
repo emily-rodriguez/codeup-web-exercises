@@ -6,6 +6,13 @@
 </head>
 <body>
     <h1>Hello, jquery</h1>
+    <h1>Another title</h1>
+    <h1>One more title</h1>
+    <h1>One more title</h1>
+    <h1>One more title</h1>
+    <h1>One more title</h1>
+
+    <button id="highlight">Highlight H1</button>
 
     <!-- (at the bottom of the body) Include your JS libraries -->
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
@@ -13,13 +20,40 @@
     <!-- Your Custom JS should go below your libraries -->
 
 <script type="text/javascript">
-    $("body").click(function() {
-        $("h1").text("Hi, Everybody");
-    });
+    // $("body").click(function() {
+    //     $("h1").text("Hi, Everybody");
+    // });
+    //
+    // document.body.addEventListener('click', function() {
+    //     document.getElementsByTagName('h1')[0]
+    // })
 
-    document.body.addEventListener('click', function() {
-        document.getElementsByTagName('h1')[0]
+    function highlight() {
+        $("h1").css('background-color', 'yellow');
+    }
+
+    $("#highlight").on('click', highlight);
+
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
+    var i = 0;
+
+    $("h1").hover(function() {
+        $(this).css({
+            "color" : colors[i % colors.length],
+            "cursor" : "pointer"
+    });
+        i++;
+    },
+    function() {
+        $(this).css("color", "black");
     })
+    //If your JS code is at the end of the page
+    // $(document).ready() is unnecessary
+    // It is NOT a replacement or an equivalent of an IIFE
+
+    //jquery is more declarative, rather than imperative
+
+
 </script>
 </body>
 </html>
