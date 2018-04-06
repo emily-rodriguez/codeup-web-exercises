@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery FAQ</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans+Narrow" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("img/cloudy-day.png");
+        }
+        h1 {
+            font-family: 'Abril Fatface', cursive;
+            text-align: center;
+            font-size: 45px;
+            text-decoration: underline;
+        }
+
+        div {
+            font-family: 'PT Sans Narrow', sans-serif;
+        }
+
+        dt {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        dd {
+            font-size: 20px;
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1>National Park FAQs</h1>
+
+<h3>Click question to reveal the answer</h3>
+
+<div>
+
+    <dl>
+        <dt>How many national parks are there?</dt>
+            <dd>There are 58 National Parks</dd>
+        <dt>How does a park become a national park?</dt>
+            <dd>Through acts of Congress</dd>
+        <dt>What is the closest national park to me?</dt>
+            <dd>Big Bend National Park</dd>
+        <dt>Which state has the most national parks?</dt>
+            <dd>California</dd>
+        <dt>Does my park have bears?</dt>
+            <dd>Yes</dd>
+        <dt>Which parks can I camp in?</dt>
+            <dd>There is no shortage of camping locations in the National Park Service -- there are over 130 park
+                units to choose from!</dd>
+        <dt>Are national parks ever closed?</dt>
+            <dd>Yes, check your local park's website for more information</dd>
+        <dt>How much is entry to each national park?</dt>
+            <dd>By comparison, in 2017 the entrance fees at Grand Canyon National Park are: $30 per vehicle, $25 per
+                motorcycle and $15 for visitors on foot or bike.</dd>
+        <dt>Is there an annual national park pass I can buy?</dt>
+            <dd>Yes, it is $80</dd>
+        <dt>What is the most visited national park?</dt>
+            <dd>Yosemite National Park</dd>
+    </dl>
+<!--<a href="#" id="toggleInvisible">Click me to toggle invisible on and off</a>-->
+
+
+<script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+
+<script type="text/javascript">
+
+    "use strict";
+
+    $("dd").addClass("invisible");
+
+    // $(document).ready(function(){
+    //     $('#toggleInvisible').click(function(event) {
+    //         event.preventDefault();
+    //         $('dd').toggleClass('invisible');
+    //     })
+    // });
+    //
+    // $('dt').click(function(){
+    //     $(this).css("background-color", "yellow")
+    // });
+
+    $('dt').click(function(event) {
+        event.preventDefault();
+        $(this).next().toggleClass('invisible');
+    })
+
+</script>
+
+</body>
+</html>
