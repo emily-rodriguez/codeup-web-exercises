@@ -14,6 +14,9 @@
 
     <button id="highlight">Highlight H1</button>
 
+    <input type="text" id="textfield" placeholder="Please type here...">
+    <div class="error"></div>
+
     <!-- (at the bottom of the body) Include your JS libraries -->
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
 
@@ -46,6 +49,21 @@
     },
     function() {
         $(this).css("color", "black");
+    });
+
+    $("#textfield").keydown(function(event) {
+
+        var currentValue = $(this).val();
+        console.log(currentValue);
+        // console.log(isNaN(currentValue));
+
+        // if (isNaN(currentValue) === false) {
+        //     $('.error').html("");
+        // }
+        //
+        if (event.keyCode < 48 || event.keyCode > 58) {
+            $('.error').html('That is not a digit').css("color", "red")
+        }
     })
     //If your JS code is at the end of the page
     // $(document).ready() is unnecessary

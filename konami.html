@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+
+    <h1>Konami Code</h1>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script type="text/javascript">
+        "use strict";
+
+        //In class solution
+
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft',
+        'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+
+        var i = 0;
+
+        $("body").keydown(function(event){
+            //Step 1. define the win condition
+            //Commit to some wishful thinking:
+            //let's pretend that we got the entire sequence correct
+            //up, but not including the very last sequence member
+            //assume the last correct key was clicked
+            //how do we figure that out?
+            console.log(event.key);
+
+            if ((i == (konamiCode.length - 1)) && event.key == 'Enter') {
+                $("h1").html("YAY! 30 LIVES FOR YOU!");
+                $("body").css("background-color", "blue")
+            }
+
+            //Step 2. define a partial (you're good, but you're not done yet) condition
+
+            else if(event.key == konamiCode[i]){
+                i++;
+                console.log("You're on the right path");
+                console.log(event.key)
+            }
+
+            //Step 3. define the lose condition (reset)
+
+            else {
+                console.log("You entered a wrong key!");
+                i = 0;
+            }
+        });
+
+
+
+
+
+        // function isInputinKonamiCode() {
+        //     if (konamiKeyValues.includes(userInput)) {
+        //         return true;
+        //     } else {
+        //         console.log("Wrong!");
+        //         $(this).html("");
+        //     }
+        // }
+
+        //
+        //
+        // $(document).keyup(function(event) {
+        //     var userInputArray = [];
+        //     var userInput = event.keyCode;
+        //     var i = 0;
+        //
+        //         if (konamiKeyValues[i] === userInput) {
+        //             console.log("Correct!");
+        //             userInputArray.push(userInput);
+        //         }
+        //
+        //         console.log(userInputArray);
+
+
+            // var arrayofColors = ["red", "blue"];
+
+            // if ((konamiKeyValues === userInputArray) && event.keyCode = 8) {
+            //     $("h1").html("You have 30 lives!");
+            //     $("body").css("background-color", "blue")
+            //
+            // }
+        // });
+
+
+
+
+        // konamiKeyValues.forEach(function(value) {
+            //     if (value !== userInput) {
+            //         console.log("Wrong!");
+            //     }
+            // })
+        // });
+
+        $("h1").css({
+            "position" : "flex",
+            "text-align" : "center"
+        });
+
+
+
+
+
+
+    </script>
+</body>
+</html>
