@@ -1,4 +1,4 @@
-Attributes and CSS
+4/9				Attributes and CSS
 
 -Getters and Setters
 	-methods (functions that belong to objects)
@@ -47,3 +47,36 @@ Traversing Methods
 .children( ) - gets children of element
 .next( ) - get the immediately following sibling of element
 .prev( ) - get the immediately preceding sibling of the element
+
+
+-example script for changing every other “each” element…
+
+<script>
+
+	$(‘li’).each( function (i) {
+		if (i % 2 === 0) {
+		var upperCasedText = $(this).text( ).to UpperCase( );
+		$(this).text(upperCasedText);
+		}
+	});
+
+</script>
+
+jQuery Effects
+
+-number of different methods for showing and hiding different html elements
+
+Basic effects:
+	- .hide( ) -hides the element
+	- .show( ) - displays the element
+	- .toggle( ) - displays or hides the element
+
+Animated effects:
+	- fading effects (in, out, toggle)
+	- sliding effects (in, out, toggle)
+
+
+-Default duration of time is 400 milliseconds, can specify a different amount
+	ex: $(‘li’).fadeToggle(2500);
+
+

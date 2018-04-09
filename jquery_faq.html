@@ -39,8 +39,8 @@
         }
 
         .frame {
-            border: 10px solid #800504;
-            max-width: auto;
+            height: 200px;
+            width: 300px;
             margin: 10px;
             box-sizing: border-box;
             padding: 0px;
@@ -52,17 +52,22 @@
         }
 
         #frame-1 {
-            background-image: url("img/big_bend.png");
-            width: 100%;
-            height: 100%
+            background-image: url("img/big_bend.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         #frame-2 {
             background-image: url("img/carlsbad.png");
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         #frame-3 {
             background-image: url("img/death-valley.png");
+            background-repeat: no-repeat;
+            background-position: center;
+
         }
 
         #sign-up {
@@ -73,21 +78,18 @@
             display: none;
         }
 
+        #swap {
+            text-align: center;
+        }
 
     </style>
 </head>
 <body>
     <div id="newsletter">
         <h1>Would you like to sign up for our Newsletter?</h1>
-        <span id="sign-up">x</span>
+        <span id="sign-up">X</span>
     </div>
 
-    <!--<div id="register" class="alert alert-info alert-dismissible" role="alert">-->
-        <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-            <!--<span aria-hidden="true"></span>-->
-        <!--</button>-->
-        <!--<h2>Would you like to register for the site?</h2>-->
-    <!--</div>-->
     <div id="register" class="alert alert-warning alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h2>Please register for our site!</h2>
@@ -157,6 +159,11 @@
             <div class="col frame" id="frame-2"></div>
             <div class="col frame" id="frame-3"></div>
         </div>
+        <div class="row">
+            <div class="col" id="swap"><button>Swap Image</button></div>
+            <div class="col" id="swap"><button>Swap Image</button></div>
+            <div class="col" id="swap"><button>Swap Image</button></div>
+        </div>
     </div>
 
 
@@ -210,7 +217,7 @@
             $(this).next().slideToggle();
         });
 
-        document.onload = setTimeout(function () {
+        setTimeout(function () {
             $('#register').fadeIn(800);
         }, 8000)
 
