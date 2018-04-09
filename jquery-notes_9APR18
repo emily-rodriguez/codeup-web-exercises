@@ -1,0 +1,49 @@
+Attributes and CSS
+
+-Getters and Setters
+	-methods (functions that belong to objects)
+	-jquery ($) is a function
+	-jquery  ($) is also an object, we can call methods on it (ex .html( ))
+
+	-Getters: finds an existing value
+	-Setters: finds and modifies a value
+
+
+-Can chain your methods…
+
+Ex. $(‘h3’).css(‘text-transform’, ‘lowercase’).css(‘font-size’, ‘5em’).css(‘color’, ‘papayawhip’);
+
+-Or pass an object to change multiple characteristics in a method…
+
+Ex. $(‘h3’).css({
+		‘text-transform’: ‘lowercase’,
+		‘font-size’: ‘5em’,
+		‘color’: ‘papayawhip
+		})
+
+
+-if you’re chaining your methods with “setters” and insert a “getter” in the middle, you’re code will break
+
+.toggleClass( ) method:
+	Here’s what it would look like if we built this method from scratch…
+
+	function toggleClass(selector, className) {
+		if ($(selector).hasClass(className) {
+			$(selector).removeClass(className)
+		} else {
+			$(selector).addClass(className)
+		}
+	}
+
+
+Traversing Methods
+
+-methods for traversing the DOM
+
+.each( ) - each matched element
+.first( ) - first element in the set
+.last( ) - final element in the set
+.parent( ) - gets parent of element
+.children( ) - gets children of element
+.next( ) - get the immediately following sibling of element
+.prev( ) - get the immediately preceding sibling of the element
