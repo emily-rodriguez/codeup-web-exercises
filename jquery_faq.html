@@ -10,7 +10,7 @@
         body {
             background-image: url("img/cloudy-day.png");
         }
-        h1 {
+        #main-header {
             font-family: 'Abril Fatface', cursive;
             text-align: center;
             font-size: 45px;
@@ -39,128 +39,158 @@
         }
 
         .frame {
-           border: 10px solid #800504;
-            height: 200px;
-            width: 300px;
-            margin: 20px;
+            border: 10px solid #800504;
+            max-width: auto;
+            margin: 10px;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #frame-1 {
+            background-image: url("img/big_bend.png");
+            width: 100%;
+            height: 100%
+        }
+
+        #frame-2 {
+            background-image: url("img/carlsbad.png");
+        }
+
+        #frame-3 {
+            background-image: url("img/death-valley.png");
+        }
+
+        #sign-up {
+            font-size: 30px;
         }
 
 
     </style>
 </head>
 <body>
-<h1>National Park FAQs</h1>
-
-<h3>Click question to reveal the answer</h3>
-
-<button id="toggleInvisible">Click me to reveal all answers</button>
-
-
-<div>
-
-    <dl>
-        <dt>How many national parks are there?</dt>
-            <dd>There are 58 National Parks</dd>
-        <dt>How does a park become a national park?</dt>
-            <dd>Through acts of Congress</dd>
-        <dt>What is the closest national park to me?</dt>
-            <dd>Big Bend National Park</dd>
-        <dt>Which state has the most national parks?</dt>
-            <dd>California</dd>
-        <dt>Does my park have bears?</dt>
-            <dd>Yes</dd>
-        <dt>Which parks can I camp in?</dt>
-            <dd>There is no shortage of camping locations in the National Park Service -- there are over 130 park
-                units to choose from!</dd>
-        <dt>Are national parks ever closed?</dt>
-            <dd>Yes, check your local park's website for more information</dd>
-        <dt>How much is entry to each national park?</dt>
-            <dd>By comparison, in 2017 the entrance fees at Grand Canyon National Park are: $30 per vehicle, $25 per
-                motorcycle and $15 for visitors on foot or bike.</dd>
-        <dt>Is there an annual national park pass I can buy?</dt>
-            <dd>Yes, it is $80</dd>
-        <dt>What is the most visited national park?</dt>
-            <dd>Yosemite National Park</dd>
-    </dl>
-
-    <button id="highlight-last-li">Click me to highlight last li</button>
-
-    <h3 id="national-parks-heading">Big Bend National Park</h3>
-        <ul id="national-parks">
-            <li>The park is named after the Rio Grande River's big bend in west Texas</li>
-            <li>There are more species of birds found at Big Bend than any other US national park</li>
-            <li>118 miles of the parks border run along the international border between the US and Mexico</li>
-            <li>It is considered one of the best places to star gaze</li>
-        </ul>
-    <h3 id="national-parks-heading">Carlsbad Caverns</h3>
-        <ul id="national-parks">
-            <li>Carlsbad fact 1</li>
-            <li>Carlsbad fact 2</li>
-            <li>Carlsbad fact 3</li>
-            <li>Carlsbad fact 4</li>
-        </ul>
-    <h3 id="national-parks-heading">Death Valley</h3>
-        <ul id="national-parks">
-            <li>Death Valley fact 1</li>
-            <li>Death Valley fact 2</li>
-            <li>Death Valley fact 3</li>
-            <li>Death Valley fact 4</li>
-        </ul>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col frame"><img src="img/big_bend.png" alt="big-bend" height="200px" width="300px"></div>
-        <div class="col frame"></div>
-        <div class="col frame"></div>
+    <div id="newsletter">
+        <h1>Would you like to sign up for our Newsletter?</h1>
+        <span id="sign-up">x</span>
     </div>
-</div>
+    <h1 id="main-header">National Park FAQs</h1>
+
+    <h3>Click question to reveal the answer</h3>
+
+    <button id="toggleInvisible">Click me to reveal all answers</button>
+
+
+    <div>
+
+        <dl>
+            <dt>How many national parks are there?</dt>
+                <dd>There are 58 National Parks</dd>
+            <dt>How does a park become a national park?</dt>
+                <dd>Through acts of Congress</dd>
+            <dt>What is the closest national park to me?</dt>
+                <dd>Big Bend National Park</dd>
+            <dt>Which state has the most national parks?</dt>
+                <dd>California</dd>
+            <dt>Does my park have bears?</dt>
+                <dd>Yes</dd>
+            <dt>Which parks can I camp in?</dt>
+                <dd>There is no shortage of camping locations in the National Park Service -- there are over 130 park
+                    units to choose from!</dd>
+            <dt>Are national parks ever closed?</dt>
+                <dd>Yes, check your local park's website for more information</dd>
+            <dt>How much is entry to each national park?</dt>
+                <dd>By comparison, in 2017 the entrance fees at Grand Canyon National Park are: $30 per vehicle, $25 per
+                    motorcycle and $15 for visitors on foot or bike.</dd>
+            <dt>Is there an annual national park pass I can buy?</dt>
+                <dd>Yes, it is $80</dd>
+            <dt>What is the most visited national park?</dt>
+                <dd>Yosemite National Park</dd>
+        </dl>
+
+        <button id="highlight-last-li">Click me to highlight last li</button>
+
+        <h3 id="national-parks-heading">Big Bend National Park</h3>
+            <ul id="national-parks">
+                <li>The park is named after the Rio Grande River's big bend in west Texas</li>
+                <li>There are more species of birds found at Big Bend than any other US national park</li>
+                <li>118 miles of the parks border run along the international border between the US and Mexico</li>
+                <li>It is considered one of the best places to star gaze</li>
+            </ul>
+        <h3 id="national-parks-heading">Carlsbad Caverns</h3>
+            <ul id="national-parks">
+                <li>Carlsbad fact 1</li>
+                <li>Carlsbad fact 2</li>
+                <li>Carlsbad fact 3</li>
+                <li>Carlsbad fact 4</li>
+            </ul>
+        <h3 id="national-parks-heading">Death Valley</h3>
+            <ul id="national-parks">
+                <li>Death Valley fact 1</li>
+                <li>Death Valley fact 2</li>
+                <li>Death Valley fact 3</li>
+                <li>Death Valley fact 4</li>
+            </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col frame" id="frame-1"></div>
+            <div class="col frame" id="frame-2"></div>
+            <div class="col frame" id="frame-3"></div>
+        </div>
+    </div>
 
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    "use strict";
+        "use strict";
 
-    $("dd").addClass("invisible");
+        $("dd").addClass("invisible");
 
-    $(document).ready(function(){
-        $('#toggleInvisible').click(function(event) {
+        $(document).ready(function(){
+            $('#toggleInvisible').click(function(event) {
+                event.preventDefault();
+                $('dd').toggleClass('invisible');
+            })
+        });
+        //
+        // $('dt').click(function(){
+        //     $(this).css("background-color", "yellow")
+        // });
+
+        $('dt').click(function(event) {
             event.preventDefault();
-            $('dd').toggleClass('invisible');
+            $(this).next().toggleClass('invisible');
+        });
+
+        $('#highlight-last-li').click(function() {
+            $('ul').each(function(index, element) {
+                $(element).children().last().addClass('highlight')
+            })
+        });
+
+        $('h3').click(function(event) {
+                $(this).next().children().css('font-weight', 'bold')
+        });
+
+        $('li').click(function(event){
+            $(this).parent().children().first().css('color', 'blue');
+        });
+
+        $('#sign-up').click(function(event) {
+            $('#newsletter').hide();
         })
-    });
-    //
-    // $('dt').click(function(){
-    //     $(this).css("background-color", "yellow")
-    // });
 
-    $('dt').click(function(event) {
-        event.preventDefault();
-        $(this).next().toggleClass('invisible');
-    });
-
-    $('#highlight-last-li').click(function() {
-        $('ul').each(function() {
-            $(this).children().last().addClass('highlight')
-        })
-    });
-
-    $('h3').click(function() {
-        $('h3').each(function() {
-            $(this).next().children().css('font-weight', 'bold')
-        })
-    });
-
-    $('li').click(function(){
-        $(this).parent().children().first().css('color', 'blue');
-    })
-
-</script>
+    </script>
 
 </body>
 </html>
