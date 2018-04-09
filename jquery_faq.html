@@ -22,6 +22,7 @@
         dt {
             font-size: 25px;
             font-weight: bold;
+            margin: 5px;
         }
 
         dd {
@@ -37,6 +38,9 @@
 <h1>National Park FAQs</h1>
 
 <h3>Click question to reveal the answer</h3>
+
+<button id="toggleInvisible">Click me to reveal all answers</button>
+
 
 <div>
 
@@ -64,7 +68,6 @@
         <dt>What is the most visited national park?</dt>
             <dd>Yosemite National Park</dd>
     </dl>
-<!--<a href="#" id="toggleInvisible">Click me to toggle invisible on and off</a>-->
 
 
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
@@ -75,12 +78,12 @@
 
     $("dd").addClass("invisible");
 
-    // $(document).ready(function(){
-    //     $('#toggleInvisible').click(function(event) {
-    //         event.preventDefault();
-    //         $('dd').toggleClass('invisible');
-    //     })
-    // });
+    $(document).ready(function(){
+        $('#toggleInvisible').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        })
+    });
     //
     // $('dt').click(function(){
     //     $(this).css("background-color", "yellow")
