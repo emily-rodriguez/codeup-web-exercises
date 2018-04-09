@@ -57,17 +57,18 @@
     (function () {
         'use strict';
 
-        function animate(color, finalPrice) {
+        function animate(finalColor, finalPrice) {
             var colors = ['green', 'yellow', 'blue', 'red', 'orange'];
-            var count = Math.floor(Math.random() * 25);
+            var limit = Math.floor(Math.random() * 25);
+            console.log(limit);
+            var i = 0;
 
             var id = setInterval(function () {
-                var i = 0;
-                $('#lucky-circle').css('background-color', colors[i]);
+                $('#lucky-circle').css('background-color', colors[i % colors.length]);
                 i++;
-                if (i == count) {
+                if (i == limit) {
                     clearInterval(id);
-                    $('#lucky-circle').css('background-color', colors[color]);
+                    $('#lucky-circle').css('background-color', colors[finalColor]);
                     $('#final-price').html('$' + finalPrice.toFixed(2));
                 }
             }, 300);
