@@ -12,10 +12,24 @@
     <h1>One more title</h1>
     <h1>One more title</h1>
 
+
     <button id="highlight">Highlight H1</button>
 
     <input type="text" id="textfield" placeholder="Please type here...">
     <div class="error"></div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody id="pets">
+
+        </tbody>
+    </table>
+
 
     <!-- (at the bottom of the body) Include your JS libraries -->
 <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
@@ -64,7 +78,24 @@
         if (event.keyCode < 48 || event.keyCode > 58) {
             $('.error').html('That is not a digit').css("color", "red")
         }
+    });
+
+    function onError(jqXHR, status, message) {
+
+    }
+
+    console.log($.ajax('pets.json'));
+
+    var request = $.ajax('pets.json');
+    request.done(function(response) {
+        response.forEach(function (pet) {
+            $('#pets').append("<tr><td>" + pet.name +"</td><td>" + pet.age + "</td></tr>")
+        })
     })
+
+    // .get == .ajax
+
+
     //If your JS code is at the end of the page
     // $(document).ready() is unnecessary
     // It is NOT a replacement or an equivalent of an IIFE
