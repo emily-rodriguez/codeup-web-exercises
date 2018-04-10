@@ -44,6 +44,8 @@
             margin: 10px;
             box-sizing: border-box;
             padding: 0px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         img {
@@ -51,22 +53,19 @@
             height: 100%;
         }
 
-        #frame-1 {
-            background-image: url("img/big_bend.jpeg");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        .image-1 {
 
-        #frame-2 {
-            background-image: url("img/carlsbad.png");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+            background-image: url("img/big_bend.jpeg")
 
-        #frame-3 {
-            background-image: url("img/death-valley.png");
-            background-repeat: no-repeat;
-            background-position: center;
+        }
+        .image-2 {
+
+            background-image: url("img/carlsbad.png")
+
+        }
+        .image-3 {
+
+            background-image: url("img/death-valley.png")
 
         }
 
@@ -155,14 +154,14 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col frame" id="frame-1"></div>
-            <div class="col frame" id="frame-2"></div>
-            <div class="col frame" id="frame-3"></div>
+            <div class="col frame frame-1"></div>
+            <div class="col frame frame-2"></div>
+            <div class="col frame frame-3"></div>
         </div>
         <div class="row">
-            <div class="col" id="swap"><button>Swap Image</button></div>
-            <div class="col" id="swap"><button>Swap Image</button></div>
-            <div class="col" id="swap"><button>Swap Image</button></div>
+            <div class="col" id="swap1"><button>Swap Image</button></div>
+            <div class="col" id="swap2"><button>Swap Image</button></div>
+            <div class="col" id="swap3"><button>Swap Image</button></div>
         </div>
     </div>
 
@@ -220,6 +219,19 @@
         setTimeout(function () {
             $('#register').fadeIn(800);
         }, 8000)
+
+        $('.frame-1').addClass('image-1');
+        $('.frame-2').addClass('image-2');
+        $('.frame-3').addClass('image-3');
+
+
+        $('#swap1').click(function() {
+            $('.frame-1').toggleClass('image-2');
+            $('.frame-2').toggleClass('image-3');
+            $('.frame-3').toggleClass('image-1')
+        });
+
+
 
     </script>
 
