@@ -1,0 +1,18 @@
+.card {
+    margin: 10px;
+}
+
+body {
+    background-color: #D6FEFE;
+}
+
+#weather-panels {
+    margin: 10px;
+}
+
+#map-canvas {
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+    margin-bottom: 40px;
+}

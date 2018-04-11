@@ -5,30 +5,30 @@
     <title>Jquery Lecture Notes</title>
 </head>
 <body>
-    <h1>Hello, jquery</h1>
-    <h1>Another title</h1>
-    <h1>One more title</h1>
-    <h1>One more title</h1>
-    <h1>One more title</h1>
-    <h1>One more title</h1>
+    <!--<h1>Hello, jquery</h1>-->
+    <!--<h1>Another title</h1>-->
+    <!--<h1>One more title</h1>-->
+    <!--<h1>One more title</h1>-->
+    <!--<h1>One more title</h1>-->
+    <!--<h1>One more title</h1>-->
 
 
-    <button id="highlight">Highlight H1</button>
+    <!--<button id="highlight">Highlight H1</button>-->
 
-    <input type="text" id="textfield" placeholder="Please type here...">
-    <div class="error"></div>
+    <!--<input type="text" id="textfield" placeholder="Please type here...">-->
+    <!--<div class="error"></div>-->
 
-    <table>
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-        </tr>
-        </thead>
-        <tbody id="pets">
+    <!--<table>-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>Name</th>-->
+            <!--<th>Age</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody id="pets">-->
 
-        </tbody>
-    </table>
+        <!--</tbody>-->
+    <!--</table>-->
 
 
     <!-- (at the bottom of the body) Include your JS libraries -->
@@ -45,53 +45,53 @@
     //     document.getElementsByTagName('h1')[0]
     // })
 
-    function highlight() {
-        $("h1").css('background-color', 'yellow');
-    }
-
-    $("#highlight").on('click', highlight);
-
-    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
-    var i = 0;
-
-    $("h1").hover(function() {
-        $(this).css({
-            "color" : colors[i % colors.length],
-            "cursor" : "pointer"
-    });
-        i++;
-    },
-    function() {
-        $(this).css("color", "black");
-    });
-
-    $("#textfield").keydown(function(event) {
-
-        var currentValue = $(this).val();
-        console.log(currentValue);
-        // console.log(isNaN(currentValue));
-
-        // if (isNaN(currentValue) === false) {
-        //     $('.error').html("");
-        // }
-        //
-        if (event.keyCode < 48 || event.keyCode > 58) {
-            $('.error').html('That is not a digit').css("color", "red")
-        }
-    });
-
-    function onError(jqXHR, status, message) {
-
-    }
-
-    console.log($.ajax('pets.json'));
-
-    var request = $.ajax('pets.json');
-    request.done(function(response) {
-        response.forEach(function (pet) {
-            $('#pets').append("<tr><td>" + pet.name +"</td><td>" + pet.age + "</td></tr>")
-        })
-    })
+    // function highlight() {
+    //     $("h1").css('background-color', 'yellow');
+    // }
+    //
+    // $("#highlight").on('click', highlight);
+    //
+    // var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo'];
+    // var i = 0;
+    //
+    // $("h1").hover(function() {
+    //     $(this).css({
+    //         "color" : colors[i % colors.length],
+    //         "cursor" : "pointer"
+    // });
+    //     i++;
+    // },
+    // function() {
+    //     $(this).css("color", "black");
+    // });
+    //
+    // $("#textfield").keydown(function(event) {
+    //
+    //     var currentValue = $(this).val();
+    //     console.log(currentValue);
+    //     // console.log(isNaN(currentValue));
+    //
+    //     // if (isNaN(currentValue) === false) {
+    //     //     $('.error').html("");
+    //     // }
+    //     //
+    //     if (event.keyCode < 48 || event.keyCode > 58) {
+    //         $('.error').html('That is not a digit').css("color", "red")
+    //     }
+    // });
+    //
+    // function onError(jqXHR, status, message) {
+    //
+    // }
+    //
+    // console.log($.ajax('pets.json'));
+    //
+    // var request = $.ajax('pets.json');
+    // request.done(function(response) {
+    //     response.forEach(function (pet) {
+    //         $('#pets').append("<tr><td>" + pet.name +"</td><td>" + pet.age + "</td></tr>")
+    //     })
+    // })
 
     // .get == .ajax
 
@@ -101,6 +101,41 @@
     // It is NOT a replacement or an equivalent of an IIFE
 
     //jquery is more declarative, rather than imperative
+
+    var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: "71f25e5faa7c8d90ac72d5eae5ed34b3",
+        q:     "San Antonio, US",
+        units: "imperial"
+    });
+
+    request.fail(function(jqXHR, status, error) {
+        console.log(status);
+        console.log(error);
+    });
+
+    request.done(function(response){
+        console.log(response);
+    });
+
+    var forecast = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "71f25e5faa7c8d90ac72d5eae5ed34b3",
+        q:     "San Antonio, US",
+        units: "imperial",
+        cnt: 3
+    });
+
+    forecast.fail(function(jqXHR, status, error) {
+        console.log(status);
+        console.log(error);
+    });
+
+    forecast.done(function(response){
+        console.log(response);
+        console.log(response.list[0].main.temp_max);
+    });
+
+
+
 
 
 </script>
