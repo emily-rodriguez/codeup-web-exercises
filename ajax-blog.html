@@ -47,11 +47,19 @@
 
 <script type="text/javascript">
 
-    $.get("data/blog.json").done(function(response) {
+    var request = $.get("data/blog.json");
+
+    request.fail(function(jqXHR, status, error) {
+        console.log(status);
+        console.log(error);
+    });
+
+    request.done(function(response) {
         response.forEach(function(entry) {
             $("#posts").append("<div class='card border-secondary'><h3 class='card-header  bg-transparent border-secondary'>"
-                + entry.title + "</h3><div class='card-body'><p>" + entry.content + "</p><p>" + "Categories: " + entry.categories.join(", ") + "</p></div><div class='card-footer'>" + entry.date + "</div></div>")
-        })
+                + entry.title + "</h3><div class='card-body'><p>" + entry.content + "</p><p>" + entry.categories.join(", ") +
+                "</p></div><div class='card-footer'>" + entry.date + "</div></div>")
+        });
     })
 
 </script>

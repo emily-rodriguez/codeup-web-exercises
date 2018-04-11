@@ -10,6 +10,11 @@
         body {
             background-image: url("img/organic tiles/organic-tiles.png");
         }
+        .card {
+            max-width: 40rem;
+            margin: 0 auto;
+            float: none;
+        }
 
     </style>
 </head>
@@ -44,8 +49,17 @@
     "use strict";
     // TODO: Create an ajax GET request for /data/inventory.json
 
+    var request = $.get("data/inventory.json");
+
+    request.fail(function(request, status, error){
+        console.log(status);
+        console.log(error);
+    });
+
     $('#refresh').click(function() {
-        $.get("data/inventory.json").done(function(response){
+        request.done(function(response){
+            $('#insertProducts').html("");
+
             response.forEach(function(tool) {
                 $('#insertProducts').append("<tr><td>" + tool.title + "</td><td>" + tool.quantity +
                     "</td><td>" + "$" + tool.price + "</td><td>" +
