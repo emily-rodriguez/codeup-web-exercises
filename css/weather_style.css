@@ -19,11 +19,29 @@ body {
 }
 
 h1  {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Comfortaa', cursive;
     text-align: center;
     margin-top: 20px;
+    color: darkblue;
 }
 
 main {
     margin: 10px;
 }
+
+#city-name {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#sub-header {
+    text-align: center;
+    color: darkblue;
+    margin-top: 20px;
+}
+
+#input-area {
+    width: 90%;
+    margin: 0 auto;
+}
+
