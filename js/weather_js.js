@@ -52,7 +52,7 @@ function getForecast(lat, lon) {
         scrollTop();
 
     });
-};
+}
 
 getForecast(sanAntonio.lat, sanAntonio.lng);
 
@@ -96,7 +96,7 @@ function callback(results, status) {
         function moveMarker (map, marker) {
             marker.setPosition(results[0].geometry.location);
             map.panTo(results[0].geometry.location);
-        };
+        }
 
         moveMarker(map, marker);
 
