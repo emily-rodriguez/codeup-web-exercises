@@ -6,11 +6,13 @@ var sanAntonio = {
 };
 
 function scrollTop() {
+    setTimeout(function () {
     window.scroll ({
         top: 0,
         left: 0,
         behavior: 'smooth'
     });
+    }, 500)
 }
 
 function getForecast(lat, lon) {
