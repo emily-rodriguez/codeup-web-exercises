@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript II</title>
+    <style>
+        #red {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+        #blue {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+        #orange {
+            background-color: orange;
+            height: 100px;
+            width: 100px;
+        }
+        #magenta {
+            background-color: magenta;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box" id="red"></div>
+<div class="box" id="blue"></div>
+<div class="box" id="orange"></div>
+<div class="box" id="magenta"></div>
+
+
+<script>
+    // asynchronous operations
+    // setTimeout(() => {
+    //     document.getElementById('red').style.display = 'none';
+    //     setTimeout(() => {
+    //         document.getElementById('blue').style.display = 'none';
+    //         setTimeout(() => {
+    //             document.getElementById('orange').style.display = 'none';
+    //             setTimeout(() => {
+    //                 document.getElementById('magenta').style.display = 'none';
+    //             }, 2000);
+    //         }, 2000);
+    //     }, 2000);
+    // }, 2000);
+    //
+    //
+    // function ajax() {
+    //
+    //     const promise = new Promise(function (resolve, reject) {
+    //         setTimeout(() => {
+    //             const number = Math.random();
+    //             console.log(number);
+    //             if (number > 0.5) {
+    //                 resolve();
+    //             } else {
+    //                 reject();
+    //             }
+    //         }, 1500);
+    //     });
+    //
+    //     return promise;
+    // }
+
+    // const promise = ajax();  //can use 'const promise here again because it's on a different scope
+    // promise.then(() => console.log('resolved'));
+    // promise.catch(() => console.log('rejected'));
+
+    function getGithubUsers() {
+        return fetch('https://api.github.com/users').then(response => response.json());
+    }
+
+    const promiseRequest = getGithubUsers()
+        .then(users => {
+            // console.log(users);
+            const listItems = users
+                .filter(user => user.login.includes('a'))
+                .map(user => `<li>${user.login}</li>`)
+                .join('')
+            ;
+            console.log(listItems);
+            document.write(`<ul>${listItems}</ul>`);
+        });
+    ;
+    promiseRequest.catch(error => console.log(error));
+
+    // const githubPromise = fetch('https://api.github.com/users');
+    //
+    // Promise.all([githubPromise, promiseRequest])
+    //     .then((response) => response.json())
+    //
+    //     .catch(function(error){
+    //
+    //     });
+
+
+
+
+
+</script>
+</body>
+</html>
