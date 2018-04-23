@@ -77,7 +77,7 @@
 
     const promiseRequest = getGithubUsers()
         .then(users => {
-            // console.log(users);
+            console.log(users);
             const listItems = users
                 .filter(user => user.login.includes('a'))
                 .map(user => `<li>${user.login}</li>`)
@@ -87,7 +87,7 @@
             document.write(`<ul>${listItems}</ul>`);
         });
     ;
-    promiseRequest.catch(error => console.log(error));
+    // promiseRequest.catch(error => console.log(error));
 
     // const githubPromise = fetch('https://api.github.com/users');
     //
