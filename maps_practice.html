@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Maps</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         #map-canvas {
             width: 500px;
@@ -12,8 +13,21 @@
 </head>
 <body>
 
-<div id="map-canvas"></div>
+<div class="container">
+    <div id="map-canvas"></div>
+</div>
 
+<div class="container">
+    <button id="blueLayer" class="btn btn-primary btn-block">Turn layers blue</button>
+    <button id="redLayer" class="btn btn-danger btn-block">Turn layers red</button>
+    <button id="greenLayer" class="btn btn-success btn-block">Turn layers green</button>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPprmIotIcFxwIKv-6moO4H8hvAXprI2g"></script>
 
 <script>
@@ -32,11 +46,32 @@
     function initMap(){
     map = new google.maps.Map(mapCanvas, mapOptions);
     map.data.loadGeoJson('testGeoJson.json');
-    map.data.setStyle({
-        fillColor: 'blue',
-        strokeWeight: 2
-    });
+
     }
+
+    $('#blueLayer').on('click',function(){
+        console.log("clicked");
+        map.data.setStyle({
+            fillColor: 'blue',
+            strokeWeight: 2
+        });
+    });
+
+    $('#redLayer').on('click',function(){
+        console.log("clicked");
+        map.data.setStyle({
+            fillColor: 'red',
+            strokeWeight: 2
+        });
+    });
+
+    $('#greenLayer').on('click',function(){
+        console.log("clicked");
+        map.data.setStyle({
+            fillColor: 'green',
+            strokeWeight: 2
+        });
+    });
 
     var geocoder = new google.maps.Geocoder();
 
