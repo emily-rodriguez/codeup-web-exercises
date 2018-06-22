@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Maps Practice</title>
+    <title>Google Maps</title>
     <style>
         #map-canvas {
             width: 500px;
@@ -19,15 +19,24 @@
 <script>
     "use strict";
     var mapOptions = {
-        zoom: 3,
+        zoom: 4,
 
         center: {
-            lat: 36.299045,
-            lng: -86.789401
+            lat: -28,
+            lng: 137
         }
     };
     var mapCanvas = document.getElementById('map-canvas');
-    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var map;
+
+    function initMap(){
+    map = new google.maps.Map(mapCanvas, mapOptions);
+    map.data.loadGeoJson('testGeoJson.json');
+    map.data.setStyle({
+        fillColor: 'blue',
+        strokeWeight: 2
+    });
+    }
 
     var geocoder = new google.maps.Geocoder();
 
@@ -89,6 +98,12 @@
             callback(results, status, restaurant);
         });
     });
+
+
+
+    initMap();
+
+
 
 
 </script>
