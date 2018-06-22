@@ -22,14 +22,6 @@ for (var i = 1; i <= 10; i++) {
 }
 
 
-for (var i = 1; i < 10; i++) {
-    var a = ' ';
-    for(var b = 1; b <= i; b++) {
-        var a = a + i;
-    }
-    console.log(a);
-}
-
 // alternate (WAY CLEANER!) solution:
 //
 // for (var i = 1; i <= 9; i++) {
